@@ -9,8 +9,8 @@ application=Flask(__name__)
 app=application
 
 #import ridge regressor and standard scalar pickle
-ridge_model=pickle.load(open(r"C:\Projects\Algerian_Forest_Fires_Prediction_End-to-End_ML-PROJECT\Flask\models\ridge_model.pkl",'rb'))
-standard_scaler=pickle.load(open(r"C:\Projects\Algerian_Forest_Fires_Prediction_End-to-End_ML-PROJECT\Flask\models\scaler.pkl",'rb'))
+ridge_model=pickle.load(open(r"C:\Projects\Algerian_forest_fires_Prediction\ridge_model.pkl",'rb'))
+standard_scaler=pickle.load(open(r"C:\Projects\Algerian_forest_fires_Prediction\scaler.pkl",'rb'))
 
 
 @app.route("/")
