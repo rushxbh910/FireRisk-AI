@@ -13,11 +13,7 @@ ridge_model=pickle.load(open(r"C:\Projects\Algerian_forest_fires_Prediction\ridg
 standard_scaler=pickle.load(open(r"C:\Projects\Algerian_forest_fires_Prediction\scaler.pkl",'rb'))
 
 
-@app.route("/")
-def index():
-    return render_template('index.html')
-
-@app.route("/predictdata",methods=['GET','POST']) #GET OPENS A STATIC PAGE, WHEREAS IF YOU SEARCH SOMETHING IN THAT STATIC PAGE WE'RE POSTING/SENDING A QUREY
+@app.route("/",methods=['GET','POST']) #GET OPENS A STATIC PAGE, WHEREAS IF YOU SEARCH SOMETHING IN THAT STATIC PAGE WE'RE POSTING/SENDING A QUREY
 def predict_datapoint():
     if request.method=='POST':
         Temperature=float(request.form.get('Temperature'))
